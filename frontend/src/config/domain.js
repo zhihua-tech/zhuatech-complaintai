@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'COMPLAINTAI',systemName:'知华客户投诉智能运营平台',englishName:'AI COMPLAINT OPERATIONS',theme:{primary:'#355f78',dark:'#213a4a',accent:'#c98243'},workspace:'客户体验中心 / 投诉运营组',fieldWorkspace:'华东服务中心 / 投诉专席',period:'2026-08-19 · 实时运营',liveText:'投诉渠道于 10:42 更新',fieldContextLabel:'当前队列',fieldContext:'华东售后 · 高优先级',fieldUser:'沈言',fieldRole:'投诉专员',adminUser:'宋知遥',adminRole:'客户体验负责人',
  adminTitle:'投诉运营指挥中心',adminBreadcrumb:'客户体验 / 智能投诉',adminSubtitle:'统一汇聚热线、在线与公开渠道投诉，用情绪、复投、SLA 和安全信号生成可解释的分级建议。',exportAction:'导出投诉日报',createAction:'新建处置任务',chartTitle:'投诉按时闭环趋势',chartSubtitle:'实际闭环率 / 服务目标',chartLabels:['08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00'],loadTitle:'渠道投诉负荷',loadSubtitle:'待处理队列占团队容量',recordsTitle:'重点投诉处置任务',recordsSubtitle:'按安全、舆情、复投和超时风险排序',issueTitle:'需要管理层介入',issueSubtitle:'重大投诉与跨部门阻塞',
