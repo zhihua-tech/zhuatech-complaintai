@@ -7,12 +7,21 @@ import jakarta.validation.Valid;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @RestController
 @RequestMapping("/api/ai/complaint")
 @PreAuthorize("hasAnyRole('DOMAIN_USER','DOMAIN_OPERATOR','ADMIN')")
 public class ComplaintAnalysisController {
     private final ComplaintAnalysisService service;
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public ComplaintAnalysisController(ComplaintAnalysisService service) { this.service = service; }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @PostMapping("/analyze")
     public ApiResponse<ComplaintAnalysisService.Result> analyze(@Valid @RequestBody ComplaintAnalysisService.Request request) {
         return ApiResponse.ok("投诉风险分级完成", service.analyze(request));

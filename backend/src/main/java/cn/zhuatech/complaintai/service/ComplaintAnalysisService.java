@@ -11,9 +11,16 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 对投诉情绪、时效、复投与安全信号进行可解释分级。 */
+/**
+ * 对投诉情绪、时效、复投与安全信号进行可解释分级。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ComplaintAnalysisService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result analyze(Request request) {
         int score = Math.max(0, 55 - request.sentimentScore());
         score += Math.min(24, request.repeatComplaints() * 8);
@@ -37,12 +44,18 @@ public class ComplaintAnalysisService {
             reasons, request.safetyOrComplianceRisk() || request.compensationAmount().compareTo(new BigDecimal("10000")) >= 0);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String complaintNo, @NotBlank String channel,
                           @Min(0) @Max(100) int sentimentScore,
                           @Min(0) @Max(20) int repeatComplaints,
                           @Min(0) int overdueMinutes, boolean safetyOrComplianceRisk,
                           @DecimalMin("0") BigDecimal compensationAmount,
                           boolean socialMediaExposure) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String complaintNo, int riskScore, String severity, String handlingQueue,
                          int responseWithinMinutes, List<String> reasons, boolean managerApprovalRequired) {}
 }
