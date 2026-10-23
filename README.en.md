@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: Complaint recurrence grouping
+
+Links recurring complaints by customer and issue within an anchored calendar window, preserving all case identifiers without automatic escalation. Signed-in users can edit inputs and export real computed results. See [API, examples and limitations](docs/AI_OPERATIONS_UPGRADE_20261023.md). No external model calls or automatic business changes; existing licensing and contacts remain unchanged.
+
 # ZhuaTech ComplaintAI
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for customer, sales, marketing, channel, and service operations.
