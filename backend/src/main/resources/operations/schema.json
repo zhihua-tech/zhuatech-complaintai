@@ -1,0 +1,98 @@
+{
+  "slug": "complaintai",
+  "title": "客诉退款余额与补偿权限",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "paid",
+      "label": "原收款金额元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "priorRefunds",
+      "label": "此前确认退款元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "requestedRefund",
+      "label": "本次拟现金退款元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "couponValue",
+      "label": "拟优惠补偿面值元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "agentLimit",
+      "label": "经办补偿权限元",
+      "type": "NUMBER",
+      "scale": 2,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "higherApproved",
+      "label": "已获更高权限批准",
+      "type": "ENUM",
+      "options": [
+        "YES",
+        "NO"
+      ]
+    }
+  ],
+  "columns": [
+    {
+      "key": "remainingRefundCapacity",
+      "label": "剩余可退现金元"
+    },
+    {
+      "key": "compensationExposure",
+      "label": "本次补偿敞口元"
+    },
+    {
+      "key": "cashRefundExcess",
+      "label": "超可退现金元"
+    },
+    {
+      "key": "requiresHigherApproval",
+      "label": "超过经办额度"
+    }
+  ],
+  "description": "核对累计现金退款不超原收款，同时把本次退款和优惠补偿纳入输入的审批额度；不调用退款接口或签发优惠券。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-24",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "paid": "1000",
+        "priorRefunds": "200",
+        "requestedRefund": "500",
+        "couponValue": "100",
+        "agentLimit": "300",
+        "higherApproved": "NO"
+      }
+    ]
+  }
+}

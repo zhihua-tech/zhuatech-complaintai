@@ -1,0 +1,66 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "HOLD",
+      "compensationExposure": "#600"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "higherApproved": "YES"
+    },
+    "expected": {
+      "decision": "REVIEW"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "requestedRefund": "801",
+      "higherApproved": "YES"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "cashRefundExcess": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "agentLimit": "600"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "priorRefunds": "1001"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "requestedRefund": "800",
+      "agentLimit": "900"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "requestedRefund": "0",
+      "couponValue": "0"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]
